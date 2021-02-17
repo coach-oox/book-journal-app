@@ -1,0 +1,142 @@
+@import "./variables";
+@import "./mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $base-font;
+    font-size: 14px;
+    background-color: $white;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+}
+
+i {
+    margin-right: 0.5em;
+}
+
+.buttons {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 500px;
+}
+
+.new-journal {
+    @include buttons(100%, 50px, $point-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+        height: 35px;
+        padding: 1em;
+        margin-bottom: 1em;
+        border: 1px solid $gray;
+    }
+
+    textarea {
+        padding: 1em;
+        border: 1px solid $gray;
+    }
+
+    .add {
+        @include buttons(45%, 35px, $point-color);
+    }
+
+    .cancel {
+        @include buttons(45%, 35px, $gray);
+    }
+}
+
+.content {
+    margin: 2em 0;
+
+    .element {
+        margin-bottom: 2em;
+    }
+
+    .created {
+        display: flex;
+    }
+
+    .time {
+        margin-left: 0.8em;
+    }
+}
+
+.element {
+    form {
+        margin-top: 1em;
+
+        textarea {
+            height: 200px;
+        }
+
+        button {
+            font-size: 1em !important;
+        }
+
+        .save {
+            @include buttons(45%, 35px, $point-color);
+        }
+    }
+}
+
+.book-title {
+    font-size: 2em;
+    background-color: $black;
+    color: $white;
+    padding: 0.5em;
+    margin-top: 0.5em;
+
+    .text {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        i {
+            margin: 0;
+            color: $white;
+        }
+    }
+}
+
+.book-journal {
+    line-height: 1.6;
+    background-color: $gray;
+    color: $white;
+    padding: 1em;
+
+    .buttons {
+        border-top: 1px dotted $white;
+        padding-top: 20px;
+        margin-top: 10px;
+        font-size: 0.5em;
+    }
+
+    .edit {
+        @include buttons(45%, 35px, $point-color);
+    }
+
+    .remove {
+        @include buttons(45%, 35px, $black);
+    }
+}
+
+.hidden {
+    display: none;
+}
