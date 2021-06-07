@@ -1,7 +1,10 @@
+Vanilla (Pure) Javascript project for beginners.  
+Check more projects [here](https://github.com/coachoox/vanilla-js-projects).
+
 # Book Journal App
 
-Simple Book Journal App made with Vanilla Javascript. [[Demo]](https://coach-oox.github.io/book-journal-app/)  
-🎈 Vanilla JS Project for Beginners.
+Simple journal app made with Vanilla Javascript.  
+[[Demo]](https://coachoox.github.io/js-journal-app/)  
 
 ## Preview
 
